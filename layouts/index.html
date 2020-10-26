@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- to use locally, instead use this line: -->
+    <!-- <link href={{ "font-awesome/css/font-awesome.min.css" | absURL }} rel="stylesheet"> -->
     <head>
         {{ partial "head.html" . }}
     </head>
