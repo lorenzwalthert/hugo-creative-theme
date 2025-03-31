@@ -3,26 +3,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 text-center">
-                    <h2 class="section-heading">{{  .Site.Params.events.headline }}</h2>
+                {{ with .Site.Params.events.headline }}
+                    <h2 class="section-heading">{{ . }}</h2>
+                {{ end }}
+                {{ if and .Site.Params.events.headline .Site.Params.events.description }}
                     <hr class="primary">
-                {{ if .Site.Params.events.imageLink1 }}
-                <p style="float: left; margin-right: 50px"><a href={{ .Site.Params.events.imageLink1 }}><img src= {{ .Site.Params.events.imageLink1 }} height="220px" width="440px"></a></p>
                 {{ end }}
-                <p style="text-align: left">{{ .Site.Params.events.description1 | markdownify }}</p>
-
-                    <a href= {{ .Site.Params.events.buttonLink1 }} class="btn btn-default btn-xl">{{ .Site.Params.events.buttonText1 }}</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 text-center">
-                {{ if .Site.Params.events.imageLink2 }}
-                <p style="float: left; margin-right: 300px"><a href= {{ .Site.Params.events.imageLink2 }}><img src= {{ .Site.Params.events.imageLink2 }} height="280" width="200px"></a></p>
+                {{ if .Site.Params.events.imageLink }}
+                <p style="float: left; margin-right: 50px"><img src= {{ .Site.Params.events.imageLink }} height="200px" width="200px"></p>
                 {{ end }}
-                <p style="text-align: left">{{ .Site.Params.events.description2 | markdownify }}</p>
+                <p style="text-align: left">{{ .Site.Params.events.description | markdownify }}</p>
 
-                    <a href= {{ .Site.Params.events.buttonLink2 }} class="btn btn-default btn-xl">{{ .Site.Params.events.buttonText2 }}</a>
+                    <a href= {{ .Site.Params.events.buttonLink }} class="btn btn-default btn-xl">{{ .Site.Params.events.buttonText }}</a>
             </div>
         </div>
     </div>
