@@ -10,11 +10,12 @@
                     <hr class="primary">
                 {{ end }}
                 {{ if .Site.Params.events.imageLink }}
-                <p style="float: left; margin-right: 50px"><img src= {{ .Site.Params.events.imageLink }} height="200px" width="200px"></p>
+                <p style="float: left; margin-right: 50px"><img src= {{ .Site.Params.events.imageLink }} height="220px" width="440px"></p>
                 {{ end }}
                 <p style="text-align: left">{{ .Site.Params.events.description | markdownify }}</p>
 
                     <a href= {{ .Site.Params.events.buttonLink }} class="btn btn-default btn-xl">{{ .Site.Params.events.buttonText }}</a>
+
             </div>
         </div>
     </div>
